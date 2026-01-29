@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation Page Vue 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar">
+        <header><h1>Technical Documentation Page Vue 3</h1></header>
+        <ul>
+          <a class="nav-link" href="#Introduction"><li>Introduction</li></a>
+          <a class="nav-link" href="#What_is_Vue?"><li>What is Vue?</li></a>
+          <a class="nav-link" href="#The_Progressive_Framework"><li>The Progressive Framework</li></a>
+          <a class="nav-link" href="#Single-File_Components"><li>Single-File Components</li></a>
+          <a class="nav-link" href="#Read_More"><li>Read More</li></a>
+        </ul>
+      </nav>
+    </header>
+  <main id="main-doc">
+    <section id="Introduction" class="main-section">
+      <header><h2>Introduction</h2></header>
+      
+      <p>Vue 3 is an approachable, performant and versatile framework for building web user interfaces.</p>
+
+      <h3>Approachable</h3>
+        <p>
+Builds on top of standard HTML, CSS and JavaScript with intuitive API and world-class documentation.
+</p>
+<h3>Performant</h3>
+<p>
+Truly reactive, compiler-optimized rendering system that rarely requires manual optimization.
+</p>
+<h3>Versatile</h3>
+<p>
+A rich, incrementally adoptable ecosystem that scales between a library and a full-featured framework.</p>
+    </section>
+    <section id="What_is_Vue?" class="main-section">
+      <header><h2>What is Vue?</h2></header>
+      <p>Vue (pronounced /vjuː/, like view) is a JavaScript framework for building user interfaces. It builds on top of standard HTML, CSS, and JavaScript and provides a declarative, component-based programming model that helps you efficiently develop user interfaces of any complexity.</p>
+      <p>Here is a minimal example:
+        <pre>
+        <code>
+          import { createApp, ref } from 'vue'
+
+          createApp({
+            setup() {
+              return {
+                count: ref(0)
+              }
+            }
+          }).mount('#app')
+</code>
+</pre>
+<pre>
+  <code>
+    &lt;div id="app"&gt;
+      &lt;button @click="count++"&gt;
+        Count is: {{ count }}
+      &lt;/button&gt;
+    &lt;/div&gt;
+  </code>
+</pre>
+<p>The above example demonstrates the two core features of Vue:</p>
+<ul>
+  <li>Declarative Rendering: Vue extends standard HTML with a template syntax that allows us to declaratively describe HTML output based on JavaScript state.</li>
+  <li>Reactivity: Vue automatically tracks JavaScript state changes and efficiently updates the DOM when changes happen.</li>
+</ul>
+<p>You may already have questions - don't worry. We will cover every little detail in the rest of the documentation. For now, please read along so you can have a high-level understanding of what Vue offers.</p>
+    </section>
+    <section class="main-section" id="The_Progressive_Framework">
+<header><h2>The Progressive Framework</h2></header>
+<p>Vue is a framework and ecosystem that covers most of the common features needed in frontend development. But the web is extremely diverse - the things we build on the web may vary drastically in form and scale. With that in mind, Vue is designed to be flexible and incrementally adoptable. Depending on your use case, Vue can be used in different ways:</p>
+<ul>
+  <li>Enhancing static HTML without a build step</li>
+  <li>Embedding as Web Components on any page</li>
+  <li>Single-Page Application (SPA)</li>
+  <li>Fullstack / Server-Side Rendering (SSR)</li>
+  <li>Jamstack / Static Site Generation (SSG)</li>
+  <li>Targeting desktop, mobile, WebGL, and even the terminal</li>
+</ul>
+<p>If you find these concepts intimidating, don't worry! The tutorial and guide only require basic HTML and JavaScript knowledge, and you should be able to follow along without being an expert in any of these.</p>
+<p>If you are an experienced developer interested in how to best integrate Vue into your stack, or you are curious about what these terms mean, we discuss them in more detail in Ways of Using Vue.</p>
+<p>Despite the flexibility, the core knowledge about how Vue works is shared across all these use cases. Even if you are just a beginner now, the knowledge gained along the way will stay useful as you grow to tackle more ambitious goals in the future. If you are a veteran, you can pick the optimal way to leverage Vue based on the problems you are trying to solve, while retaining the same productivity. This is why we call Vue "The Progressive Framework": it's a framework that can grow with you and adapt to your needs.</p>
+    </section>
+    <section class="main-section" id="Single-File_Components">
+      <header><h2>Single-File Components</h2></header>
+      <p>In most build-tool-enabled Vue projects, we author Vue components using an HTML-like file format called Single-File Component (also known as *.vue files, abbreviated as SFC). A Vue SFC, as the name suggests, encapsulates the component's logic (JavaScript), template (HTML), and styles (CSS) in a single file. Here's the previous example, written in SFC format:</p>
+      <pre>
+        <code>
+          &lt;script setup>
+          import { ref } from 'vue'
+          const count = ref(0)
+          &lt;/script>
+</code></pre><pre><code>
+          &lt;template>
+            &lt;button @click="count++">Count is: {{ count }}&lt;/button>
+          &lt;/template>
+</code></pre><pre><code>
+          &lt;style scoped>
+          button {
+            font-weight: bold;
+          }
+          &lt;/style>
+        </code>
+      </pre>
+      <p>SFC is a defining feature of Vue and is the recommended way to author Vue components if your use case warrants a build setup. You can learn more about the how and why of SFC in its dedicated section - but for now, just know that Vue will handle all the build tools setup for you.</p>
+    </section>
+    <section class="main-section" id="Read_More">
+<header><h2>Read More</h2></header>
+<p>On the <a href="https://vuejs.org/guide/introduction.html" target="_blank">Vue official web documentation</a></p>
+    </section>
+  </main>
+  </body>
+</html>

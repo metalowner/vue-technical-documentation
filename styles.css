@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    color: rgb(22, 22, 22);
+}
+pre, code {
+  white-space: pre-wrap;
+  word-wrap: break-word; /* Deprecated, but good for older IE support */
+  overflow-wrap: break-word; /* The current standard for word-wrap */
+}
+#navbar {
+    padding: 1rem;
+    text-align: left;
+    width: 100%;
+}
+#navbar ul {
+    list-style: none;
+}
+#navbar ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid gray;
+}
+#navbar ul li:hover {
+    background-color: rgb(196, 196, 196);
+}
+
+#navbar h1 {
+    font-size: 1.2em;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: 1rem;
+}
+#main-doc {
+    padding: 1rem;
+}
+.main-section {
+    margin-bottom: 2rem;
+}
+p {
+    padding: 1rem;
+}
+section ul > li::marker {
+    color: gray;
+    font-size: 1.5em;
+}
+section ul li {
+    margin: 0rem 2rem;
+}
+a {
+    text-decoration: none;
+    color: rgb(43, 43, 43);
+}
+section a {
+    text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 20% auto;
+    }
+    #navbar {
+    width: 20%;
+    position: fixed;
+    }
+    #main-doc {
+        padding: 1rem;
+    }
+}
